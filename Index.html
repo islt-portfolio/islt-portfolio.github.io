@@ -1,0 +1,108 @@
+<!--
+********************************************************************************************************
+Title: Home Page
+Use: Introduction to the portfolio's coder and author, RM Roesch
+Author: RM Roesch
+School/Term: University of Missouri, Fall 2025
+Updated: September 28, 2025
+Developed: September 28, 2025
+Tested: September 28, 2025 - Passed validation
+Passed VI on Mac desktop browsers in Safari, Firefox, and Chrome.
+Passed VI on iPad tablet browsers in Safari, Firefox, and Chrome.
+Passed VI on iPhone mobile browsers in Safari, Firefox, and Chrome.
+********************************************************************************************************
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rebecca Roesch - Learning Technologies Portfolio</title>
+    
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet" type="text/css">
+    
+    <!-- FAVICONS -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    
+    <!-- LINK TO CSS FILES -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="nav.css" type="text/css">
+</head>
+
+<body>
+    <!-- SKIP LINK for Screen Readers -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="nav-logo">
+                <img src="content/BR_dk_slate_logo.png" alt="Becky Roesch Logo" class="logo-icon">
+                <span class="logo-text">Becky Roesch</span>
+            </a>
+            
+            <!-- Mobile hamburger toggle -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" id="hamburger">≣</label>
+            
+            <!-- Navigation menu -->
+            <ul class="navMenu">
+                <li><a href="index.html" class="current">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="program-of-study.html">Program of Study</a></li>
+                <li><a href="goals-objectives.html">Goals &amp; Objectives</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <!-- Hero Content -->
+            <div class="hero-content">
+                <h1 class="hero-name">Rebecca Roesch</h1>
+                <p class="hero-subtitle">Learning Technologies Student | Graduating Fall 2025</p>
+                
+                <p class="welcome-text">Welcome! I'm passionate about creating learning experiences that truly make a difference in people's lives and careers.</p>
+            </div>
+            
+            <!-- Hero Image -->
+            <div class="hero-image">
+                <img src="content/rebecca-headshot.jpg" alt="Rebecca Roesch professional headshot" class="headshot-hero">
+            </div>
+            
+            <!-- Hero Overflow Content -->
+            <div class="hero-overflow">
+                <p class="body-text">This website showcases my journey through the Learning Technologies and Design program at the University of Missouri. Through the program, I've developed expertise in researching learner needs, designing engaging online instruction, and developing game-based learning to create memorable training experiences. As someone who believes in meeting learners where they are and inspiring them to go farther, I've built this portfolio to demonstrate how my education has sharpened both my professional capabilities and my personal approach to solving complex problems.</p>
+                
+                <p class="body-text">My background as a teacher-turned-marketer influenced my project choices throughout the program. The artifacts I've selected highlight core competencies in instructional design and technology integration while demonstrating my philosophy of creating clear, practical solutions that facilitate authentic learning. These projects showcase how the ISLT program has reinforced my passion for transforming educational challenges into engaging, results-driven experiences that help people and organizations thrive.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <p><strong>Connect with Becky:</strong> 
+            <img src="content/email_icon.png" alt="Email icon" class="footer-icon email">
+            <a href="mailto:islt_portfolio@icloud.com">via Email</a> | 
+            <img src="content/briefcase_icon.png" alt="LinkedIn icon" class="footer-icon briefcase">
+            <a href="https://linkedin.com/in/rebecca-roesch" target="_blank" rel="noopener">on LinkedIn</a></p>
+            
+            <p>Built with HTML, CSS, &amp; passion for learning technology. | &copy; 2025 RM Roesch</p>
+            
+            <p><a href="accessibility-statement.html">Accessibility Statement</a> | 
+            <a href="mailto:islt_portfolio@icloud.com">Report Accessibility Issues</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!--
+********************************************************************************************************
+Title: Program of Study Page
+Use: Complete academic coursework listing with course reflections
+Author: RM Roesch
+School/Term: University of Missouri, Fall 2025
+Updated: September 28, 2025
+Developed: September 28, 2025
+Tested: September 28, 2025 - Passed validation
+Passed VI on Mac desktop browsers in Safari, Firefox, and Chrome.
+Passed VI on iPad tablet browsers in Safari, Firefox, and Chrome.
+Passed VI on iPhone mobile browsers in Safari, Firefox, and Chrome.
+********************************************************************************************************
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Program of Study - RM Roesch</title>
+    
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet" type="text/css">
+    
+    <!-- FAVICONS -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    
+    <!-- LINK TO CSS FILES -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="nav.css" type="text/css">
+</head>
+
+<body>
+    <!-- SKIP LINK for Screen Readers -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="nav-logo">
+                <img src="content/BR_dk_slate_logo.png" alt="Becky Roesch Logo" class="logo-icon">
+                <span class="logo-text">Becky Roesch</span>
+            </a>
+            
+            <!-- Mobile hamburger toggle -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" id="hamburger">≣</label>
+            
+            <!-- Navigation menu -->
+            <ul class="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="program-of-study.html" class="current">Program of Study</a></li>
+                <li><a href="goals-objectives.html">Goals &amp; Objectives</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+        <!-- PROGRAM OF STUDY SECTION -->
+        <section class="program-section">
+            <h1>Program of Study</h1>
+            
+            <!-- TODO CSS: Hide .course-toc on mobile (max-width: 767px) with display: none -->
+            <!-- TODO CSS: Add scroll-margin-top to .course-entry to offset for fixed nav -->
+            <!-- Table of Contents -->
+            <nav class="course-toc">
+                <a href="#islt7361">IS_LT 7361</a> | 
+                <a href="#islt7383">IS_LT 7383</a> | 
+                <a href="#islt9450">IS_LT 9450</a> | 
+                <a href="#islt9471">IS_LT 9471</a> | 
+                <a href="#islt9484">IS_LT 9484</a> | 
+                <a href="#islt9474">IS_LT 9474</a> | 
+                <a href="#islt9421">IS_LT 9421</a> | 
+                <a href="#islt7384">IS_LT 7384</a> | 
+                <a href="#islt9473">IS_LT 9473</a> | 
+                <a href="#islt7355">IS_LT 7355</a>
+            </nav>
+            
+            <!-- TODO CSS: Style .course-number with sapphire blue color (use CSS variable) -->
+            <!-- TODO CSS: Style .course-title with italics -->
+            <!-- TODO CSS: Add spacing/borders between .course-entry articles for visual separation -->
+            <!-- TODO CSS: Style .back-to-top link (right-align, add hover effects) -->
+            <!-- Course Reflections -->
+            <div class="course-reflections">
+                
+                <!-- Course 1 -->
+                <article id="islt7361" class="course-entry">
+                    <h2 class="course-number">IS_LT 7361</h2>
+                    <h3 class="course-title">Introduction to Digital Media</h3>
+                    
+                    <p>This foundational course taught me technical production skills I've used throughout my time in the ISLT program. Even more than that, I learned that creating technically correct digital media is only half the battle—understanding your audience and their motivations is equally crucial. My multimedia project about Apple's People Detection feature turned out to be much more complex than I originally anticipated, requiring me to balance giving learners enough detail to be successful without overwhelming them. Breaking the content into three components (audio, graphics, and video) proved more helpful than I initially realized, but the real learning came from discovering that motivating adult learners requires focusing on benefits rather than just features. I had intended the audio component to be a straightforward how-to guide, but it evolved into more of a "why this matters" piece—and that shift was actually much more valuable for encouraging lifelong learning.</p>
+                    
+                    <p>The project also reinforced that sometimes simple really is better. While my graphic was fairly basic, it offered the essential steps concisely—if that's all someone had time for, it could still help them accomplish the task. However, this course also highlighted a crucial gap in my understanding of universal design principles. Despite choosing an accessibility-focused topic, my execution fell short of serving my target audience of low-vision users. The fonts were too small, color contrast was inadequate, and layouts were cramped—showing me that good intentions aren't enough without proper implementation. This contradiction between accessible content and inaccessible design taught me that truly effective digital media requires both technical competence and deep consideration of user needs, a lesson that has shaped my approach to every project since and a beneficial first class toward my degree.</p>
+                    
+                    <p class="back-to-top"><a href="#main-content">^ Back to Top</a></p>
+                </article>
+                
+                <!-- Course 2 -->
+                <article id="islt7383" class="course-entry">
+                    <h2 class="course-number">IS_LT 7383</h2>
+                    <h3 class="course-title">Rapid Development Tools</h3>
+                    
+                    <p>This course challenged me to master Adobe Captivate in an accelerated timeframe, which taught me valuable lessons about iterative development and professional resilience. While the learning curve was steep, I discovered that I work best when I can survey new software capabilities before diving into project planning. Initially, I found myself forcing the program to behave in complex ways, only to discover simpler, more elegant solutions later—but those "mistakes" became crucial learning moments that deepened my understanding of the tool's capabilities. The experience reinforced that mastery comes through experimentation and revision, not perfection the first go-round.</p>
+                    
+                    <p>The most valuable takeaway was embracing iteration as a strength rather than a failure. Learning that resubmits demonstrate growth rather than inadequacy shifted my entire approach to challenging projects. I became more willing to try creative solutions, test different approaches, and rebuild when necessary—even when it meant abandoning work I was initially proud of (like my "Find It, Face It, Fake It" page redesign). This course also opened my eyes to design thinking in my daily professional life; I began noticing how colleagues approach creative problems, iterate on feedback, and solve challenges through thoughtful design choices. The rapid development mindset I gained here directly applies to my current work environment, where quick turnarounds and responsive design thinking are essential skills.</p>
+                    
+                    <p class="back-to-top"><a href="#main-content">^ Back to Top</a></p>
+                </article>
+                
+                <!-- Course 3 -->
+                <article id="islt9450" class="course-entry">
+                    <h2 class="course-number">IS_LT 9450</h2>
+                    <h3 class="course-title">Research Methods in ISLT</h3>
+                    
+                    <p>This course marked a pivotal moment in my development as a graduate student, largely thanks to a professor who made it easy to get back into the swing of academic research while helping me discover my own research identity. The class began with an exercise that connected us to historical researchers whose approaches resonated with our own worldview, and I was matched with Jane Addams. Reading about her pragmatic approach to social reform and belief in "sympathetic knowledge"—that new information can disrupt stagnant thinking and transform how we perceive the world—spoke directly to my teacher's heart. Addams' commitment to understanding people we disagree with, her support for pluralism and lateral progress that benefits all segments of society, and her belief in fallibilism (learning from mistakes to build stronger outcomes) became foundational to how I approach research questions.</p>
+                    
+                    <p>This pragmatic, humanistic mindset directly informed my research interests and methodology throughout the program. When I began exploring how teachers' use of technology evolved during Covid-19 and what tools they found most successful, I was applying Addams' principles—seeking to understand diverse experiences, learn from both failures and successes, and ultimately offer practical solutions that could benefit the entire educational community. The professor arranged a session with a librarian on database searching that proved invaluable, and the research skills I developed here became the foundation for my comprehensive research paper on emergency remote teaching. More importantly, this course taught me that good research isn't just about methodology—it's about approaching human problems with empathy, practical solutions in mind, and a commitment to understanding rather than judging the people we study.</p>
+                    
+                    <p class="back-to-top"><a href="#main-content">^ Back to Top</a></p>
+                </article>
+                
+                <!-- Course 4 -->
+                <article id="islt9471" class="course-entry">
+                    <h2 class="course-number">IS_LT 9471</h2>
+                    <h3 class="course-title">Instructional Systems Design</h3>
+                    
+                    <p>This course shifted how I approach workplace training challenges and gave me confidence to leverage my non-traditional background as a strategic advantage. Working on an education degree from a career distinctly outside the education field, I initially felt at a disadvantage to my peers currently teaching in the classroom. But the more comfortable I became with ADDIE, the more I realized my diverse professional perspective brings valuable "outside the box" thinking to instructional design problems. The course taught me to see my different background as exactly that— different, not deficient— and to recognize the transferable skills I've been building all along. When my company launched a new affiliate program during the semester, I was thrilled to discover I was the go-to person for onboarding strategy, naturally asking the core ISD questions: What do they need to know? When do they need to know it? What's the best method to deliver information? How will we measure success?</p>
+                    
+                    <p>Beyond practical application, this course developed my analytical thinking and systematic approach to challenges in learning design. I started the semester chanting "ADDIE—Analyze, Design, Develop, Implement, Evaluate" just to keep the steps straight, but ended with a nuanced understanding of how each phase builds on the others and where my natural strengths lie within the process. The course also opened my eyes to career possibilities I hadn't considered, teaching me to read job descriptions in this field with much greater clarity and insight. I now feel confident pursuing roles that combine my existing professional experience with these newly developed instructional design competencies, knowing I can contribute unique value to organizations needing help educating their workforce.</p>
+                    
+                    <p class="back-to-top"><a href="#main-content">^ Back to Top</a></p>
+                </article>
+                
+                <!-- Course 5 -->
+                <article id="islt9484" class="course-entry">
+                    <h2 class="course-number">IS_LT 9484</h2>
+                    <h3 class="course-title">Teaching Online Courses</h3>
+                    
+                    <p>This course challenged my assumptions about online education and taught me that teaching comfortably with technology doesn't necessarily translate to being comfortable teaching online with technology. I walked in feeling confident because I'd taught before and was comfortable online, but quickly discovered that juggling teaching while managing technology required an entirely different skill set. The course shifted my perspective from overconfidence to a much clearer understanding of how complex teaching and learning online really is. Through our Synchronous Instructional Sessions, I experienced firsthand how online teaching demands careful attention to digital pedagogy, community building, and professional responsibilities— areas where I grew a lot while also spotting opportunities for continued development in learner engagement and assessment strategies. Teaching online with technology also bolstered empathy and respect for classmates who built their experience teaching online during Covid.</p>
+                    
+                    <p>The biggest surprise was discovering the importance of community building, something that hadn't previously crossed my mind. Moderating discussion boards felt like a strategic game of chess: how could I acknowledge different viewpoints while guiding conversations deeper without shutting down what others had already contributed? This experience taught me that strong learning communities don't magically solve every challenge, but they definitely make difficulties more manageable and allow everyone to contribute meaningfully. Most importantly, this course reinforced that the learning process itself has tremendous value, not just the final products we create— a function of process art versus product art. This shift from seeing the instructor as the only expert, to building understanding collaboratively with students, completely changed how I approach educational design.</p>
+                    
+                    <p class="back-to-top"><a href="#main-content">^ Back to Top</a></p>
+                </article>
+                
+                <!-- Course 6 -->
+                <article id="islt9474" class="course-entry">
+                    <h2 class="course-number">IS_LT 9474</h2>
+                    <h3 class="course-title">Front End Analysis</h3>
+                    
+                    <p>The systematic analysis framework I learned in Front End Analysis became one of my most transferable skill sets across the program. Digging into a possible learning situation with a variety of tools was fascinating. Gathering learners' input via survey creation in Qualtrics was immediately practical; being able to design surveys that actually gather the information you need is a skill I've used repeatedly. More importantly, the professor's insistence on creating neutral questions that don't influence respondents became a cornerstone of how I approach data collection. I found myself applying this principle in other courses, always asking myself whether my questions might be leading participants toward particular answers rather than allowing them to respond authentically. Despite the advancements of AI, sharp analytical skills are tremendously important and mission critical to ISD.</p>
+                    
+                    <p>The most transferable skill from this course was learning how much detail matters when breaking down tasks and activities within a system. The meticulous process of analyzing every component of a workflow or learning system initially felt tedious, but it strengthened my approach complex projects. When I later needed to create a Work Breakdown Structure in Project Management, the analytical framework from this class made that assignment much more manageable. This course taught me that front-end analysis isn't just an academic exercise—it's essential groundwork that prevents problems later in any design or improvement process. I gained systematic analysis skills and attention to detail that became foundational in my approach to instructional design and project planning throughout the program.</p>
+                    
+                    <p class="back-to-top"><a href="#main-content">^ Back to Top</a></p>
+                </article>
+                
+                <!-- Course 7 -->
+                <article id="islt9421" class="course-entry">
+                    <h2 class="course-number">IS_LT 9421</h2>
+                    <h3 class="course-title">Usability of Information Systems and Services</h3>
+                    
+                    <p>Usability provided hands-on experience with user-centered design methodology and taught me valuable user testing and team leadership skills. The semester-long structure was particularly effective; each assignment built the skills needed for our culminating usability test project, which created a logical progression from theory to practice. I volunteered for several key roles within our group, including writing testing scripts, analyzing results, and facilitating team communication. Learning to conduct usability tests with actual participants was nerve-wracking, but I quickly realized that proctoring skills strengthen with repetition and practice. Developing consistent testing protocols helped ensure our assessment methodology would yield reliable data. Using Google Forms and Sheets for data collection and aggregation proved invaluable; letting the spreadsheets handle tabulation allowed for faster and more accurate analysis, even in our relatively small-scale study.</p>
+                    
+                    <p>This project made clear that ease of use and user satisfaction are related, but distinct, measures that vary based on what users expect and need. Our participants were looking to find products for friends or family members; it became clear that even when a site is technically easy to navigate, it may still lack features that could enhance user satisfaction. Beyond the technical skills, this course challenged me to develop leadership competencies in a collaborative environment. Facilitating communication among team members across several timezones with different schedules, interests, and skill levels proved both challenging and worthwhile. I continue working on the balance between offering direction, maintaining collaboration, and making space for each of us to grow in areas where we're developing skills. These leadership and communication competencies have proven valuable well beyond this single project.</p>
+                    
+                    <p class="back-to-top"><a href="#main-content">^ Back to Top</a></p>
+                </article>
+                
+                <!-- Course 8 -->
+                <article id="islt7384" class="course-entry">
+                    <h2 class="course-number">IS_LT 7384</h2>
+                    <h3 class="course-title">Designing Games for Learning</h3>
+                    
+                    <p>Designing Games for Learning provided an eye-opening "peek behind the curtain" into game design, revealing the tremendous amount of work and thoughtful design that goes into creating effective educational games. I had no idea how large a part systematic design plays in the process, or how much effort goes into seamlessly blending learning objectives with engaging gameplay. Using Zoombinis as our exemplar was inspiring-- and intimidating; it set a high bar in demonstrating what good educational game design looks like. The course structure worked well, with each skill level (Analyzer, Deviser, Creator, Designer) building systematically toward our final game prototype. I particularly appreciated how other ISLT courses dovetailed perfectly into this one— Front-End Analysis, Instructional Systems Design, Usability, and Rapid Development all provided essential background which made this course easier to navigate.</p>
+                    
+                    <p>The progression through different skill badges offered distinct but interconnected competencies. The Analyzer badge showed me how much forethought goes into effective game design through our Zoombinis teardown. The Deviser badge was a sleeper favorite because it highlighted storytelling as central to game design—crafting plausible narratives that players want to buy into was surprisingly challenging and fun. The Creator badge emphasized that assessment design must align with learning objectives and actually measure what you intend to measure, demonstrating validity. Finally, the Designer badge culminated everything as I worked to make my game behave as designed using Construct3—which was both humbling and satisfying. Beyond technical skills, this course deepened my understanding of Bloom's Taxonomy and higher-order thinking skills, which is solid knowledge with uses far beyond game design. Working with progressively complex learning outcomes reminds me that how you define problems and state objectives directly influences the results you'll achieve.</p>
+                    
+                    <p class="back-to-top"><a href="#main-content">^ Back to Top</a></p>
+                </article>
+                
+                <!-- Course 9 -->
+                <article id="islt9473" class="course-entry">
+                    <h2 class="course-number">IS_LT 9473</h2>
+                    <h3 class="course-title">Project Management</h3>
+                    
+                    <p>My family, friends, and colleagues were absolutely worn out with hearing my takeaways from this class! I found so much information from this class to be relevant that I've already begun using it, both personally and professionally. The risk management section was my absolute favorite—learning to assess risks by gauging probability times impact, and assigning numbers via a risk matrix was genuinely life-changing. I know that sounds dramatic, but I use this technique more than once a day, and it's helped me approach uncertainty much more strategically! I also loved developing response strategies to mitigate against issues (or just roll with them), which gave me many more options than my what I'd had access to previously.</p>
+                    
+                    <p>I'm in the middle of a large personal project that's been in the works for several years, and I was starting to feel overwhelmed. Learning to create a Work Breakdown Structure was a game-changer; I realized all my sticky notes were actually great category headings! Now I feel much more prepared to gather the remaining info I need, budget properly, and handle potential issues before they become real problems. This course helped me fill in gaps and structure my organization skills significantly, and I'm grateful to have these additional tools at my disposal.</p>
+                    
+                    <p class="back-to-top"><a href="#main-content">^ Back to Top</a></p>
+                </article>
+                
+                <!-- Course 10 -->
+                <article id="islt7355" class="course-entry">
+                    <h2 class="course-number">IS_LT 7355</h2>
+                    <h3 class="course-title">Web Design &amp; Development</h3>
+                    
+                    <p>This course taught me that advanced planning is crucial in web development, but flexibility in approach and execution should always be part of that plan! Understanding how CSS Grid and Flexbox work together was fundamental to creating responsive layouts that actually function (well!) across different devices. One of my favorite realizations was observing the dynamics between what "Client Becky" said she wanted, how "Designer Becky" interpreted and fleshed out those requirements, and what "Dev Becky" was actually able to build with with her novice skill level. This internal dialogue perfectly illustrated real-world team dynamics and the importance of clear communication between different roles in web development projects.</p>
+                    
+                    <p>My major takeaway? Iterative design process is everything. Starting with basic requirements and continuously refining based on feedback, testing, and my evolving aesthetic reminded me that good design emerges through thoughtful iteration, not perfect first attempts. The same principle applies to development: understanding how difficult it can be to execute in code something that looks simple from a design perspective illustrated, again, that development is also inherently iterative. These skills will indirectly support my career goals in learning experience design and client education. Although I have no interest in becoming a professional coder, having a better understanding of web fundamentals helps me communicate more effectively with developers and create better user experiences. Whether I'm building educational platforms or developing digital literacy programs, this knowledge helps bridge the gap between concept and implementation. Beyond technical skills, this course reinforced lessons from my very first ISLT class about universal design principles. My initial digital media project reflected poor accessibility implementation, but building this portfolio with proper color contrast, semantic markup, and responsive design demonstrates significant growth in creating inclusive experiences for all users.</p>
+                    
+                    <p class="back-to-top"><a href="#main-content">^ Back to Top</a></p>
+                </article>
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <p><strong>Connect with Becky:</strong> 
+            <img src="content/email_icon.png" alt="Email icon" class="footer-icon email">
+            <a href="mailto:islt_portfolio@icloud.com">via Email</a> | 
+            <img src="content/briefcase_icon.png" alt="LinkedIn icon" class="footer-icon briefcase">
+            <a href="https://linkedin.com/in/rebecca-roesch" target="_blank" rel="noopener">on LinkedIn</a></p>
+            
+            <p>Built with HTML, CSS, &amp; passion for learning technology. | &copy; 2025 RM Roesch</p>
+            
+            <p><a href="accessibility-statement.html">Accessibility Statement</a> | 
+            <a href="mailto:islt_portfolio@icloud.com">Report Accessibility Issues</a></p>
+        </div>
+    </footer>
+</body>
+</html>
