@@ -1,0 +1,431 @@
+/*
+Portfolio Website Navigation Styles
+Author: Becky Roesch
+Course: IS_LT 7355 Web Design & Development
+University of Missouri, Fall 2025
+Created: June 25, 2025
+Last Updated: November 8, 2025
+Tested: November 8, 2025 - Streamlined for flat navigation structure
+*/
+
+
+/* ----- CSS COLOR PALETTE ----- */
+:root {
+    /* Basic Colors */
+    --charcoal-black: #1a202c;
+    --dark-slate: #2c3e50;
+    --sapphire-blue: #0369a1;
+    --vibrant-orange: #d4521f;
+    --cool-gray: #4a5568;
+    --medium-gray: #666;
+    --off-white: #fdfdfd;
+    --pure-white: #ffffff;
+}
+
+
+/* ----- NAVIGATION CONTAINER ----- */
+nav {
+    background-color: var(--pure-white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(102, 102, 102, 0.12);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    
+    /* Full width trick - extends navbar beyond container */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+}
+
+
+/* Nav inner container */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* ----- LOGO STYLING ----- */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    z-index: 101; /* Above hamburger menu */
+}
+
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+
+.logo-text {
+    color: var(--dark-slate);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+
+/* ----- CHECKBOX TRICK FOR MOBILE TOGGLE ----- */
+/* Hide the checkbox input */
+#menu-toggle {
+    display: none;
+}
+
+
+/* Hamburger button - visible on mobile only */
+#hamburger {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--sapphire-blue);
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+    user-select: none;
+    z-index: 101; /* Above menu */
+}
+
+#hamburger:hover,
+#hamburger:focus {
+    color: var(--vibrant-orange);
+}
+
+
+/* ----- NAVIGATION MENU (Flat Structure) ----- */
+/* Mobile: Hidden by default, shows when checkbox is checked */
+.navMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--pure-white);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0;
+    z-index: 50;
+}
+
+/* Show menu when checkbox is checked */
+#menu-toggle:checked ~ .navMenu {
+    display: block;
+}
+
+
+.navMenu li {
+    margin: 0;
+}
+
+
+.navMenu a {
+    display: block;
+    padding: 0.75rem 1rem;
+    min-height: 44px; /* for touch spacing, for accessibility */
+    text-decoration: none;
+    color: var(--sapphire-blue);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+
+/* Mobile hover effects */
+.navMenu a:hover,
+.navMenu a:focus {
+    background-color: var(--off-white);
+}
+
+.navMenu a:focus {
+    outline: 2px solid var(--vibrant-orange);
+    outline-offset: 2px;
+}
+
+/* Orange left border on hover - mobile */
+.navMenu a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: var(--vibrant-orange);
+    transition: width 0.3s ease;
+}
+
+.navMenu a:hover::before,
+.navMenu a:focus::before {
+    width: 4px;
+}
+
+/* Current page styling - mobile */
+.navMenu a.current {
+    background-color: var(--sapphire-blue);
+    color: var(--pure-white);
+}
+
+
+/* ----- RESPONSIVE BREAKPOINTS ----- */
+
+/* TABLET AND DESKTOP - 768px and up */
+@media screen and (min-width: 768px) {
+    
+    /* Hide hamburger button on desktop */
+    #hamburger {
+        display: none;
+    }
+    
+    /* Transform nav to horizontal layout */
+    .nav-container {
+        justify-content: space-between;
+    }
+    
+    /* Show navigation as horizontal layout */
+    .navMenu {
+        display: flex !important; /* Override mobile hidden state */
+        position: static; /* Reset mobile positioning */
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+        align-items: center;
+    }
+    
+    .navMenu li {
+        display: inline-block;
+        margin-left: 2rem;
+    }
+    
+    .navMenu a {
+        display: inline-block;
+        padding: 0.75rem 1rem;
+        position: relative;
+    }
+    
+    /* Remove mobile orange left border on desktop */
+    .navMenu a::before {
+        display: none;
+    }
+    
+    /* Desktop hover - orange slide under */
+    .navMenu a::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--vibrant-orange);
+        transition: width 0.3s ease;
+    }
+    
+    .navMenu a:hover::after,
+    .navMenu a:focus::after {
+        width: 100%;
+    }
+    
+    .navMenu a:hover {
+        background-color: transparent; /* Remove mobile background */
+    }
+    
+    /* Current page styling - desktop with slate gray underline */
+    .navMenu a.current {
+        color: var(--sapphire-blue);
+        background-color: transparent;
+        position: relative;
+    }
+    
+    /* Slate gray underline for current page - stays visible */
+    .navMenu a.current::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--dark-slate);
+        transition: none; /* No animation - always visible */
+    }
+    
+    /* Orange hover effect should NOT appear on current page */
+    .navMenu a.current:hover::after,
+    .navMenu a.current:focus::after {
+        background: var(--dark-slate); /* Keep slate gray, don't change to orange */
+        width: 100%;
+    }
+}
+
+
+/* BIG Desktop - Premium spacing 1024+ */
+@media screen and (min-width: 1024px) {
+    .nav-container {
+        padding: 0 40px;
+    }
+    
+    .navMenu li {
+        margin-left: 2.5rem;
+    }
+    
+    .navMenu a {
+        font-size: 1rem;
+        padding: 0.75rem 1.25rem;
+    }
+}
+
+
+/* ============================================
+   DROPDOWN MENU CODE - COMMENTED OUT
+   (Ready for future use if needed)
+   ============================================
+
+/* ----- MOBILE DROPDOWN STYLING ----- */
+/* Hide dropdown submenu globally - meets instructor requirement */
+/*
+.navMenu .dropdown {
+    position: relative;
+}
+*/
+
+/* Hide dropdown submenu on mobile only */
+/*
+@media screen and (max-width: 767px) {
+    .navMenu .mobileHide {
+        display: none !important;
+    }
+}
+*/
+
+/* ----- DESKTOP DROPDOWN (768px+) ----- */
+/*
+@media screen and (min-width: 768px) {
+    
+    /* Projects dropdown container */
+    /*
+    .navMenu .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    */
+    
+    /* Show submenu on hover - DESKTOP ONLY */
+    /*
+    .navMenu .dropdown:hover .mobileHide {
+        display: block !important;
+    }
+    */
+    
+    /* Bridge trick - prevents missing dropdown */
+    /*
+    .navMenu .dropdown::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 18px;
+        background: transparent;
+    }
+    */
+    
+    /* Desktop dropdown submenu styling */
+    /*
+    .navMenu .mobileHide {
+        display: none;
+        position: absolute;
+        top: calc(100% + 18px);
+        left: 0;
+        background-color: var(--pure-white);
+        width: max-content;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border-radius: 0 0 6px 6px;
+        list-style: none;
+        margin: 0;
+        padding: 0.5rem 0;
+        z-index: 50;
+        transform: translateY(-10px);  
+    }
+    */
+
+    /*
+    .navMenu .mobileHide li {
+        margin: 0;
+        display: block;
+        padding-left: 0;
+    }
+    */
+    
+    /*
+    .navMenu .mobileHide a {
+        display: block;
+        padding: 0.75rem 1rem;
+        color: var(--sapphire-blue);
+        text-decoration: none;
+        font-size: 0.9rem;
+        margin-left: 0;
+        border-radius: 0;
+        position: relative;
+        min-width: 120px;
+        line-height: 1.3 !important;
+        padding: 0.625rem 0.75rem !important;
+        white-space: normal;
+    }
+    */
+    
+    /* Orange left border effect for submenu items */
+    /*
+    .navMenu .mobileHide a::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0;
+        background: var(--vibrant-orange);
+        transition: width 0.3s ease;
+    }
+    */
+    
+    /*
+    .navMenu .mobileHide a:hover::before,
+    .navMenu .mobileHide a:focus::before {
+        width: 4px;
+    }
+    */
+    
+    /*
+    .navMenu .mobileHide a::after {
+        display: none;
+    }
+    */
+    
+    /*
+    .navMenu .mobileHide a:hover {
+        background-color: var(--off-white);
+    }
+    */
+
+    /* Orange Focus state for dropdown links - Keyboard nav support */
+    /*
+    .navMenu .mobileHide a:focus {
+        outline: 2px solid var(--vibrant-orange);
+        outline-offset: 2px;
+    }
+    */
+/*
+}
+*/
+
+/* ============================================
+   END OF COMMENTED DROPDOWN CODE
+   ============================================ */
