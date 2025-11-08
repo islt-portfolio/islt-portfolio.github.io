@@ -116,7 +116,6 @@ nav {
     margin: 0;
     padding: 1rem 0;
     z-index: 50;
-    
 }
 
 /* Show menu when checkbox is checked */
@@ -136,7 +135,7 @@ nav {
     min-height: 44px; /* for touch spacing, for accessibility */
     text-decoration: none;
     color: var(--sapphire-blue);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.95rem;
     transition: all 0.3s ease;
     position: relative;
@@ -240,14 +239,14 @@ nav {
         background-color: transparent; /* Remove mobile background */
     }
     
-    /* Current page styling - desktop with slate gray underline */
+    /* Current page styling - desktop with orange text and orange underline */
     .navMenu a.current {
-        color: var(--sapphire-blue);
+        color: var(--vibrant-orange);
         background-color: transparent;
         position: relative;
     }
     
-    /* Slate gray underline for current page - stays visible */
+    /* Orange underline for current page - stays visible */
     .navMenu a.current::after {
         content: '';
         position: absolute;
@@ -255,14 +254,14 @@ nav {
         left: 0;
         width: 100%;
         height: 2px;
-        background: var(--dark-slate);
+        background: var(--vibrant-orange);
         transition: none; /* No animation - always visible */
     }
     
-    /* Orange hover effect should NOT appear on current page */
+    /* Current page underline should stay orange on hover */
     .navMenu a.current:hover::after,
     .navMenu a.current:focus::after {
-        background: var(--dark-slate); /* Keep slate gray, don't change to orange */
+        background: var(--vibrant-orange); /* Keep orange, don't change */
         width: 100%;
     }
 }
