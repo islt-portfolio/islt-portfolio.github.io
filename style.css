@@ -4,8 +4,8 @@ Author: Becky Roesch
 Course: IS_LT 7355 Web Design & Development
 University of Missouri, Fall 2025
 Created: November 8, 2025
-Last Updated: November 8, 2025
-Tested: November 8, 2025
+Last Updated: November 9, 2025
+Tested: November 9, 2025
 
 NOTE: Hamburger icon updated in HTML to &#9776; for better display
 
@@ -64,6 +64,7 @@ html, body {
     --body-text: var(--cool-gray);
     --nav-links: var(--sapphire-blue);
     --body-links: var(--sapphire-blue);
+    --visited-links: var(--dark-slate);
     --footer-bg: var(--dark-slate);
     --footer-text: var(--pure-white);
     --footer-links: var(--pure-white);
@@ -184,6 +185,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 0;
+    padding-top: 2rem;
 }
 
 /* Standard Section Container */
@@ -214,10 +216,10 @@ p a:hover,
     color: var(--vibrant-orange);
 }
 
-/* Keep links blue after visiting (for goals-objectives artifacts) */
+/* Turn links gray after visiting (for goals-objectives artifacts) */
 .goal-description a:visited,
 .objective-content a:visited {
-    color: var(--sapphire-blue);
+    color: var(--medium-gray);
 }
 
 
@@ -348,14 +350,12 @@ footer strong {
 
 /* Footer Icon Animation */
 .footer-icon.email,
-.footer-icon.phone,
 .footer-icon.briefcase {
     transition: transform 0.3s ease;
     cursor: pointer;
 }
 
 .footer-icon.email:hover,
-.footer-icon.phone:hover,
 .footer-icon.briefcase:hover {
     transform: scale(1.5);
 }
@@ -478,14 +478,19 @@ footer strong {
     margin-bottom: 2rem;
 }
 
-/* Goal title uses h2 styling - no override needed */
 .goal-title {
     /* Inherits from h2 styles */
+    margin-top: 0; /* At top of card */
+    margin-bottom: 0.75rem; /* Less bottom spacing for proximity */
 }
 
-/* Goal description uses standard paragraph styling - no override needed */
+/* Goal description - lighter weight to distinguish from body text */
 .goal-description {
-    /* Inherits from p / .body-text styles */
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 300;
+    margin-bottom: .25rem; /* Less bottom spacing for proximity */
+
 }
 
 /* Objectives container */
@@ -498,7 +503,7 @@ footer strong {
 
 /* ===================================
    11. VIDEO PLAYER STYLES
-   (Ported from old about.html for resume.html)
+   (Copied from old about.html for resume.html Yay, Past Becky!)
    =================================== */
 
 .video-resume-section {
@@ -548,7 +553,7 @@ ul li {
 
 
 /* ===================================
-   13. RESPONSIVE TYPOGRAPHY
+   13. RESPONSIVE FONT USE - WOOT!
    =================================== */
 
 /* Mobile adjustments */
@@ -639,13 +644,186 @@ ul li {
 
 
 /* ===================================
+   15. GOALS & OBJECTIVES ACCORDION SYSTEM
+   =================================== */
+
+/* Hide the checkbox completely */
+.objective-accordion input[type="checkbox"] {
+    display: none;
+}
+
+/* Style the clickable accordion header */
+.objective-header {
+    display: block;
+    background-color: var(--sapphire-blue);
+    color: var(--pure-white);
+    padding: 1rem 1.5rem;
+    margin-bottom: 0;
+    cursor: pointer;
+    border-radius: 6px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Arrow indicator - starts as right-pointing triangle */
+.objective-header::before {
+    content: "▶";
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    transition: transform 0.3s ease;
+    font-size: 1rem;
+}
+
+/* Hover effect on accordion header */
+.objective-header:hover {
+    background-color: var(--dark-slate);
+}
+
+/* The collapsible content - starts hidden */
+.objective-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: var(--off-white);
+    border-radius: 0 0 6px 6px;
+}
+
+/* When checkbox is checked, expand the content */
+.objective-accordion input[type="checkbox"]:checked ~ .objective-content {
+    max-height: 5000px;
+    padding: 1.5rem;
+    margin-bottom: 0;
+}
+
+/* Rotate arrow 90 degrees when clicked/tapped */
+.objective-accordion input[type="checkbox"]:checked ~ .objective-header::before {
+    transform: rotate(90deg);
+}
+
+/* Style headings inside accordion content */
+.objective-content h3 {
+    color: var(--dark-slate);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+/* First h3 shouldn't have top margin */
+.objective-content h3:first-of-type {
+    margin-top: 0;
+}
+
+/* Paragraphs inside accordion */
+.objective-content p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+/* Goal card styling */
+.goal-card {
+    background-color: var(--pure-white);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Horizontal divider between goal sections */
+.goal-section {
+    position: relative;
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+}
+
+.goal-section:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.75px;
+    background-color: var(--medium-gray);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Artifact screenshot styling */
+.artifact-screenshot {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 20px auto 10px auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Figure caption styling */
+figcaption {
+    font-style: italic;
+    margin-top: 10px;
+    color: var(--medium-gray);
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* Artifact links styling - regular text links, centered */
+.artifact-link {
+    display: block;
+    text-align: center;
+    margin: 0.5rem 0;
+    color: var(--sapphire-blue);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.artifact-link:hover {
+    color: var(--vibrant-orange);
+}
+
+/* Ensures artifact links in obj content turn orange on hover too */
+.objective-content .artifact-link:hover {
+    color: var(--vibrant-orange);
+}
+
+/* Mobile: Show artifact links, hide desktop screenshots */
+@media screen and (max-width: 768px) {
+    .artifact-desktop {
+        display: none;
+    }
+    
+    .artifact-mobile {
+        display: block;
+    }
+}
+
+/* Desktop: Show screenshots + links, hide mobile-only links */
+@media screen and (min-width: 769px) {
+    .artifact-mobile {
+        display: none;
+    }
+    
+    .artifact-desktop {
+        display: block;
+    }
+    
+    /* Add spacing between multiple artifacts on desktop */
+    .artifact-display.artifact-desktop {
+        margin-bottom: 3rem;
+    }
+}
+
+
+/* ===================================
    PLACEHOLDER SECTIONS
    (To be built in future phases)
    =================================== */
 
-/* TODO Phase 2: Goals & Objectives Accordion System */
 /* TODO Phase 2: Resume Preview Section */
-/* TODO Phase 2: Artifact Display Toggle (mobile/desktop) */
 /* TODO Phase 2: Table of Contents for Program of Study */
 /* TODO Phase 2: Course Entry Styling */
 /* TODO Phase 3: Advanced responsive refinements */
