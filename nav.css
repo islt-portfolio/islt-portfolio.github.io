@@ -135,7 +135,7 @@ nav {
     min-height: 44px; /* for touch spacing, for accessibility */
     text-decoration: none;
     color: var(--sapphire-blue);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.95rem;
     transition: all 0.3s ease;
     position: relative;
@@ -243,6 +243,7 @@ nav {
     .navMenu a.current {
         color: var(--vibrant-orange);
         background-color: transparent;
+        font-weight: 700;
         position: relative;
     }
     
