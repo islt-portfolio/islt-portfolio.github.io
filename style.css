@@ -64,7 +64,7 @@ html, body {
     --body-text: var(--cool-gray);
     --nav-links: var(--sapphire-blue);
     --body-links: var(--sapphire-blue);
-    --visited-links: var(--dark-slate);
+    --visited-links: var(--medium-gray);
     --footer-bg: var(--dark-slate);
     --footer-text: var(--pure-white);
     --footer-links: var(--pure-white);
@@ -219,7 +219,7 @@ p a:hover,
 /* Turn links gray after visiting (for goals-objectives artifacts) */
 .goal-description a:visited,
 .objective-content a:visited {
-    color: var(--medium-gray);
+    color: var(--visited-links);
 }
 
 
@@ -457,7 +457,7 @@ footer strong {
 }
 
 /* Goals & Objectives layout */
-.goals-header {
+.label {
     margin-bottom: 2rem;
 }
 
@@ -664,7 +664,7 @@ ul li {
     position: relative;
     transition: background-color 0.3s ease;
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.4;
 }
 
 /* Arrow indicator - starts as right-pointing triangle */
@@ -766,8 +766,9 @@ figcaption {
     font-style: italic;
     margin-top: 10px;
     color: var(--medium-gray);
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     text-align: center;
+    line-height: 1.4rem;
 }
 
 /* Artifact links styling - regular text links, centered */
