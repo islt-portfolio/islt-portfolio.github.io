@@ -5,7 +5,7 @@ Course: IS_LT 7355 Web Design & Development
 University of Missouri, Fall 2025
 Created: November 8, 2025
 Last Updated: November 11, 2025
-Tested: November 9, 2025
+Tested: November 11, 2025
 
 
 ARCHITECTURE:
@@ -589,6 +589,19 @@ footer strong {
     margin: 20px auto 10px auto;
     border-radius: 4px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* Resume preview link wrapper */
+.resume-preview-link {
+    display: block;
+    text-decoration: none;
+}
+
+/* Resume instruction text (not a link, just instructional) */
+.resume-instruction {
+    color: var(--cool-gray);
+    text-decoration: none;
 }
 
 
