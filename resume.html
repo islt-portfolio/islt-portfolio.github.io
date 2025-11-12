@@ -4,7 +4,7 @@ Title: Resume Page
 Use: Professional resume and video resume for portfolio evaluation
 Author: RM Roesch
 School/Term: University of Missouri, Fall 2025
-Updated: November 2, 2025
+Updated: November 9, 2025
 Developed: September 28, 2025
 Tested: November 2, 2025 - Passed validation
 Passed VI on Mac desktop browsers in Safari, Firefox, and Chrome.
@@ -33,26 +33,6 @@ Passed VI on iPhone mobile browsers in Safari, Firefox, and Chrome.
     <!-- LINK TO CSS FILES -->
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="nav.css" type="text/css">
-    
-    <!-- 
-    ============================================
-    TO-DO: ADD RESUME PREVIEW CSS TO style.css
-    ============================================
-    Add this CSS code into my style.css file whenEVAH I'm ready!
-    Look for the section marked "RESUME PREVIEW SECTION"
-    This includes:
-    - .resume-preview-section
-    - .resume-preview-link
-    - .resume-preview-image
-    - .download-overlay
-    - .download-icon
-    - .download-text
-    - .resume-actions
-    - .btn-download
-    - .resume-text-summary
-    - Mobile responsive styles
-    ============================================
-    -->
 </head>
 
 <body>
@@ -97,38 +77,10 @@ Passed VI on iPhone mobile browsers in Safari, Firefox, and Chrome.
                 
         <!-- Resume Preview & Download Section -->
             <div class="resume-preview-section">
-                <h2>Professional Resume</h2>
-                <p class="body-text">Feel free to explore my detailed experience and qualifications in the resume here. Click the preview below to download a PDF copy, or use the "View in Browser" option to open it in a new tab.</p>
-    
-        <!-- Clickable Resume Preview -->
-            <a href="https://drive.google.com/uc?export=download&id=1eHg25HBUNmL1Qu5t2QGu-thGiR_vENf8" 
-               class="resume-preview-link">
-            <img src="content/251102_pdf_resume_preview.jpg" 
-             alt="Preview of Becky Roesch's professional resume showing work experience, education, and technical competencies. Click to download full PDF." 
-             class="resume-preview-image">
-            <div class="download-overlay">
-                <span class="download-icon">📄</span>
-                <span class="download-text">Click to Download PDF Resume</span>
-            </div>
-        </a>
-    
-    <!-- Action Buttons -->
-    <div class="resume-actions">
-        <a href="https://drive.google.com/uc?export=download&id=1eHg25HBUNmL1Qu5t2QGu-thGiR_vENf8" 
-           class="btn-download">
-            Download Resume (PDF)
-        </a>
-        <a href="https://drive.google.com/file/d/1eHg25HBUNmL1Qu5t2QGu-thGiR_vENf8/view" 
-           target="_blank" 
-           rel="noopener"
-           class="btn-download btn-view">
-            View in Browser
-        </a>
-    </div>
-
+            
                     <!-- Text Summary for SEO & Accessibility -->
-                    <div class="resume-text-summary">
-                        <h3>Professional Highlights</h3>
+                    <div class="resume-text-summary mobile-hide">
+                        <h2>Highlights</h2>
                         <p><strong>Current Role:</strong> Marketing Operations Specialist at Metabolic Meals LLC, where I've contributed to 120% increase in email open rates and 165% increase in click rates through strategic campaign development.</p>
                         
                         <p><strong>Education:</strong> Completing M.S. in Information Science &amp; Learning Technologies (4.0 GPA) at University of Missouri, specializing in Learning Technologies &amp; Design.</p>
@@ -141,6 +93,28 @@ Passed VI on iPhone mobile browsers in Safari, Firefox, and Chrome.
                             <li><strong>Project Management:</strong> Academic Project Management Theory, Risk Assessment, Resource Planning, SmartSheet, Gantt Charts</li>
                         </ul>
                     </div>
+
+                <h2>Experience</h2>
+
+        <!-- Resume Preview -->
+            <img src="content/251102_pdf_resume_preview.jpg" 
+             alt="Preview of Becky Roesch's resume." 
+             class="resume-preview-image">
+    
+    <!-- Action Buttons -->
+    <div class="resume-actions">
+        <a href="download.html" 
+           class="resume-link">
+            ⬇️ Download PDF
+        </a>
+        <span class="link-separator"> | </span>
+        <a href="https://drive.google.com/file/d/1eHg25HBUNmL1Qu5t2QGu-thGiR_vENf8/view" 
+           target="_blank" 
+           rel="noopener"
+           class="resume-link">
+            📄 View in Browser
+        </a>
+    </div>
                 </div>
 
                 <!-- Video Resume Section -->
