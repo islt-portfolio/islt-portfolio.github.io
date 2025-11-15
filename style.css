@@ -278,8 +278,8 @@ p a:visited:hover,
     height: auto;
 }
 
-/* Reflection page artifact images */
-.reflection-artifact {
+/* Reflection page  images */
+.reflection- {
     display: block;
     width: 100%;
     max-width: 800px;
@@ -702,8 +702,8 @@ footer strong {
 
 
 /* Resume action links - inline on desktop, stacked on mobile */
-/* Shared link styles for artifact and resume links */
-.artifact-link,
+/* Shared link styles for  and resume links */
+.-link,
 .resume-link {
     color: var(--sapphire-blue);
     text-decoration: underline;
@@ -1035,7 +1035,7 @@ ul li {
     width: 100%;
     max-width: 800px;
     height: auto;
-    margin: 20px auto 10px auto;
+    margin: 30px auto 10px auto;
     border-radius: 4px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
