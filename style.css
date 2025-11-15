@@ -1101,6 +1101,60 @@ figcaption {
 
 
 /* ===================================
+   16. REFLECTION PAGE STYLES
+   =================================== */
+
+/* Reflection page h2 headings - sapphire blue */
+.reflection-section h2 {
+    color: var(--sapphire-blue);
+}
+
+/* Learning topic container - wraps paragraph + artifact */
+.learning-topic-container {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Full-height vertical line for learning topics - Desktop */
+.learning-topic-container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px; /* Same thin width as the original pipe */
+    background-color: var(--sapphire-blue);
+}
+
+/* Reflection artifact images - updated spacing for better proximity */
+.reflection-artifact {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 10px auto 30px auto; /* Less space above, more below */
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile: Replace vertical line with background color */
+@media screen and (max-width: 767px) {
+    .learning-topic-container {
+        padding: 1rem;
+        background-color:#f5f5f5;
+        border-radius: 4px;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Remove the vertical line on mobile */
+    .learning-topic-container::before {
+        display: none;
+    }
+}
+
+
+/* ===================================
    PLACEHOLDER SECTIONS
    (To be built in future phases)
    =================================== */
