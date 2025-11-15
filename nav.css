@@ -15,7 +15,7 @@ Tested: November 8, 2025 - Streamlined for flat navigation structure
     --charcoal-black: #1a202c;
     --dark-slate: #2c3e50;
     --sapphire-blue: #0369a1;
-    --vibrant-orange: #d4521f;
+    --vibrant-orange: #ff5e24;
     --cool-gray: #4a5568;
     --medium-gray: #666;
     --off-white: #fdfdfd;
@@ -141,6 +141,10 @@ nav {
     position: relative;
 }
 
+/*.navMenu a:hover,
+.navMenu a:focus {
+    transform: scale(1.1);
+} */
 
 /* Mobile hover effects */
 .navMenu a:hover,
@@ -244,6 +248,7 @@ nav {
         color: var(--vibrant-orange);
         background-color: transparent;
         font-weight: 700;
+        font-size: 1.1875rem;
         position: relative;
     }
     
