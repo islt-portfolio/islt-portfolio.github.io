@@ -1273,6 +1273,12 @@ footer .copyright {
 
 /* Small screens - hide pipe, make copyright smaller and move to new line */
 @media screen and (max-width: 600px) {
+    /* Force "Connect with Becky:" to its own line */
+    footer strong {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    
     footer .copyright-separator {
         display: none; /* Hide the | on mobile */
     }
