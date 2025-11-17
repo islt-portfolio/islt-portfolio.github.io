@@ -278,8 +278,8 @@ p a:visited:hover,
     height: auto;
 }
 
-/* Reflection page  images */
-.reflection- {
+/* Reflection page artifact images */
+.reflection-artifact {
     display: block;
     width: 100%;
     max-width: 800px;
@@ -296,15 +296,14 @@ p a:visited:hover,
 
 footer {
     background-color: var(--dark-slate);
-    background-size: 5px 5px;
     color: var(--footer-text);
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: 0.9rem; /* Updated from 0.8rem */
     line-height: 1.5;
-    padding: 20px;
-    text-align: left;
-    margin-top: 3rem;
+    padding: 1.5rem 1rem; /* Updated: top/bottom 1.5rem, left/right 1rem */
+    text-align: center; /* Mobile default: center */
+    margin-top: 0; /* Updated from 3rem */
     
     /* Full width trick - extends footer beyond container */
     position: relative;
@@ -318,13 +317,13 @@ footer {
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1rem; /* Updated from 20px to match footer padding */
 }
 
 footer p {
     margin: 0.5rem 0;
     color: var(--footer-text);
-    font-size: 0.8rem;
+    font-size: 0.9rem; /* Updated from 0.8rem */
     line-height: 1.5;
 }
 
@@ -380,6 +379,53 @@ footer strong {
 .footer-icon.email:hover,
 .footer-icon.briefcase:hover {
     transform: scale(1.5);
+}
+
+
+/* ===================================
+   8B. ACCESSIBILITY BAR (Below Footer)
+   =================================== */
+
+.accessibility-bar {
+    background-color: var(--pure-white);
+    color: var(--dark-slate);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding: 1rem;
+    text-align: center;
+    
+    /* Full width trick */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+}
+
+.accessibility-bar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.accessibility-bar a {
+    color: var(--sapphire-blue); /* Changed from dark-slate to sapphire-blue */
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.accessibility-bar a:hover {
+    color: var(--vibrant-orange);
+}
+
+.accessibility-bar a:visited {
+    color: var(--medium-gray) !important;
+}
+
+.accessibility-bar a:visited:hover {
+    color: var(--vibrant-orange) !important;
 }
 
 
@@ -702,8 +748,8 @@ footer strong {
 
 
 /* Resume action links - inline on desktop, stacked on mobile */
-/* Shared link styles for  and resume links */
-.-link,
+/* Shared link styles for artifact and resume links */
+.artifact-link,
 .resume-link {
     color: var(--sapphire-blue);
     text-decoration: underline;
@@ -1035,7 +1081,7 @@ ul li {
     width: 100%;
     max-width: 800px;
     height: auto;
-    margin: 30px auto 10px auto;
+    margin: 20px auto 10px auto;
     border-radius: 4px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -1150,6 +1196,91 @@ figcaption {
     /* Remove the vertical line on mobile */
     .learning-topic-container::before {
         display: none;
+    }
+}
+
+
+/* ===================================
+   17. ACCESSIBILITY STATEMENT PAGE STYLES
+   =================================== */
+
+/* Accessibility section container */
+.accessibility-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* Accessibility page h2 headings - sapphire blue to match other pages */
+.accessibility-section h2 {
+    color: var(--sapphire-blue);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* First h2 should not have top margin */
+.accessibility-section h2:first-of-type {
+    margin-top: 0;
+}
+
+/* Section spacing */
+.accessibility-section section {
+    margin-bottom: 2rem;
+}
+
+/* List spacing - tighter than body copy */
+.accessibility-section ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.accessibility-section li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4; /* Tighter than body text (1.7) but still readable */
+}
+
+/* Email link styling within lists - sapphire blue */
+.accessibility-section ul a {
+    color: var(--sapphire-blue);
+    text-decoration: underline;
+}
+
+.accessibility-section ul a:hover {
+    color: var(--vibrant-orange);
+}
+
+.accessibility-section ul a:visited {
+    color: var(--visited-links) !important;
+}
+
+.accessibility-section ul a:visited:hover {
+    color: var(--vibrant-orange) !important;
+}
+
+
+/* ===================================
+   18. COPYRIGHT NOWRAP - FOOTER
+   =================================== */
+
+/* Copyright separator and text styling */
+footer .copyright-separator {
+    /* Pipe character between built-with and copyright */
+}
+
+footer .copyright {
+    /* Copyright text */
+}
+
+/* Small screens - hide pipe, make copyright smaller and move to new line */
+@media screen and (max-width: 600px) {
+    footer .copyright-separator {
+        display: none; /* Hide the | on mobile */
+    }
+    
+    footer .copyright {
+        display: block; /* Force to new line */
+        font-size: 0.8rem; /* Smaller than footer's 0.9rem */
+        margin-top: 0.25rem; /* Small spacing */
     }
 }
 
