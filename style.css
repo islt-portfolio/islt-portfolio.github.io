@@ -1273,10 +1273,11 @@ footer .copyright {
 
 /* Small screens - hide pipe, make copyright smaller and move to new line */
 @media screen and (max-width: 600px) {
-    /* Force "Connect with Becky:" to its own line */
-    footer strong {
-        display: block;
-        margin-bottom: 0.5rem;
+    /* Reduce footer padding to maximize text width */
+    footer,
+    .footer-container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
     
     footer .copyright-separator {
@@ -1288,6 +1289,34 @@ footer .copyright {
         font-size: 0.8rem; /* Smaller than footer's 0.9rem */
         margin-top: 0.25rem; /* Small spacing */
     }
+    
+    /* Reduce accessibility bar padding to match footer */
+    .accessibility-bar,
+    .accessibility-bar-container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+/* Extra-narrow phones (415px or less) - Different layout to prevent awkward wrapping */
+@media screen and (max-width: 415px) {
+    /* Force "Connect with Becky:" to its own line on very narrow screens */
+    footer strong {
+        display: block;
+        margin-bottom: 0.5rem;
+        line-height: 1rem;
+    }
+    
+    /* Show the copyright pipe and keep copyright inline */
+    footer .copyright-separator {
+        display: inline; /* Show the | */
+    }
+    
+    footer .copyright {
+        display: inline; /* Keep inline with "Built with..." */
+        font-size: 0.9rem; /* Same size as rest of footer */
+        margin-top: 0; /* No extra spacing */
+    }
 }
 
 
@@ -1296,7 +1325,5 @@ footer .copyright {
    (To be built in future phases)
    =================================== */
    
-/* TODO Phase 2: Table of Contents for Program of Study */
-/* TODO Phase 2: Course Entry Styling */
-/* TODO Phase 3: Advanced responsive refinements */
-/* TODO Phase 3: Accessibility enhancements */
+/* TODO: Advanced responsive refinements */
+
