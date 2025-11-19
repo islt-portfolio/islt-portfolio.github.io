@@ -23,6 +23,21 @@ Tested: November 8, 2025 - Streamlined for flat navigation structure
 }
 
 
+/* ----- SCREEN READER ONLY TEXT ----- */
+/* Visually hidden but accessible to screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
 /* ----- NAVIGATION CONTAINER ----- */
 nav {
     background-color: var(--pure-white);
@@ -74,6 +89,8 @@ nav {
     color: var(--dark-slate);
     font-weight: 600;
     font-size: 1.1rem;
+    line-height: 1.1; /* Tighter spacing when text wraps */
+
 }
 
 
@@ -180,6 +197,17 @@ nav {
     color: var(--pure-white);
 }
 
+/* Prevent navigation links from showing visited styles - mobile */
+.navMenu a:visited {
+    color: var(--sapphire-blue); /* Same as default link color */
+}
+
+/* Current page visited state - mobile */
+.navMenu a.current:visited {
+    background-color: var(--sapphire-blue);
+    color: var(--pure-white); /* Keep white text */
+}
+
 
 /* ----- RESPONSIVE BREAKPOINTS ----- */
 
@@ -269,6 +297,16 @@ nav {
     .navMenu a.current:focus::after {
         background: var(--vibrant-orange); /* Keep orange, don't change */
         width: 100%;
+    }
+    
+    /* Prevent navigation links from showing visited styles - desktop */
+    .navMenu a:visited {
+        color: var(--sapphire-blue); /* Same as default link color */
+    }
+    
+    /* Current page visited state - desktop */
+    .navMenu a.current:visited {
+        color: var(--vibrant-orange); /* Keep orange */
     }
 }
 

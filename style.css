@@ -4,20 +4,8 @@ Author: Becky Roesch
 Course: IS_LT 7355 Web Design & Development
 University of Missouri, Fall 2025
 Created: November 9, 2025
-Last Updated: November 13, 2025
-Tested: November 13, 2025
-
-
-ARCHITECTURE:
-1. CSS Reset & Basic Styles
-2. Typography & Fonts
-3. Color Styles
-4. Layout Styles
-5. Component Styles
-6. Page-Specific Styles
-7. Responsive Breakpoints
-8. Utility Classes
-*/
+Last Updated: November 19, 2025
+Tested: November 19, 2025
 
 
 /* ===================================
@@ -243,7 +231,7 @@ p a:visited:hover,
 .skip-link {
     position: absolute;
     top: -40px;
-    left: 0;
+    left: -9999px;
     background: var(--sapphire-blue);
     color: var(--pure-white);
     padding: 8px 16px;
@@ -527,6 +515,11 @@ footer strong {
 .course-toc a:hover {
     color: var(--vibrant-orange);
     text-decoration: underline;
+}
+
+h2[id]:focus {
+    outline: 2px solid var(--vibrant-orange);
+    outline-offset: 4px;
 }
 
 .course-toc a:visited {
